@@ -1,0 +1,167 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Music!</title>
+<style>
+    body {
+      font-family: Arial;
+      background: url("music.jpg")center center fixed;
+    background-size: cover;
+    
+    }
+    
+    .navbar {
+        display:flex;
+    justify-content:end;
+    background-color: rgb(8, 8, 8);
+    height: 8vh;
+    width: 98vw;
+    font-family:'Georgia';
+    margin-top: 1px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 2px;
+
+
+    }
+    
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    
+    .dropdown .dropbtn {
+      font-size: 16px;  
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 25px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+    
+    .navbar a:hover, .dropdown:hover .dropbtn {
+      background-color: red;
+      border-radius: 20px
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fdfcf1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: rgb(202, 230, 205);
+      border-radius: 1px
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .animation{
+        
+        background-image: linear-gradient(
+            -225deg,
+            #ff4800 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+
+        );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 3s linear infinite;
+        display: inline-block;
+        font-size: 40px;
+    }
+    @keyframes textclip{
+        to{
+            background-position: 200% center;
+        }
+    }
+    </style>
+       <link rel="shortcut icon" href="play.ico">
+    </head>
+    <body>
+    
+    <div class="navbar">
+      <a href="#">Home</a>
+      <a href="#">News</a>
+      <a href="#">Follow Us</a>
+      <div class="dropdown">
+        <button class="dropbtn">More Music
+        </button>
+        <div class="dropdown-content">
+          <a href="https://www.spotify.com/">Spotify</a>
+          <a href="https://www.Pandora.com/">Pandora</a>
+          <a href="https://www.last.fm/tag/groove">Groove Music</a>
+        </div>
+      </div> 
+    </div>
+    <center style="padding-left:45% ;padding-top: 10%;">
+    <h3 class="animation">Click the Button to Play!</h3>
+    
+    <script type="text/JavaScript">
+        var mysound = document.getElementById("mysound");
+        var icon = document.getElementById("icon");
+        
+        function yfunction() {
+            var mysound = document.getElementById("mysound");
+            var icon = document.getElementById("icon");
+             if (mysound.paused) {
+         
+                        
+                        mysound.play();
+                        
+                        icon.src =
+        "pause.ico";
+                    } else {
+         
+                        
+                        mysound.pause();
+                        icon.src =
+        "play.ico";
+                    }
+                }
+            </script>
+            <audio src="imran.mp3" id="mysound" autoplay="false"></audio>
+            <div class="image">
+              <button type="button" onclick="yfunction();"><img src="play.ico" id="icon"/></button>
+          </div>
+        </center>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <footer style="color:red">
+          <center> <p>Copyright © 2022-23</p></center>
+        </footer>
+</body>
+</html>

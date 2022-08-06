@@ -1,0 +1,185 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" charset="utf-8"></script>
+    <style>
+        .backgroundcolor{
+            background:linear-gradient(30deg ,royalblue,rgb(255, 0, 0));
+        }
+        .title{
+            color: white;
+            text-align: center;
+            font-size: 3rem;
+            text-shadow: 0  0 5px rgb(0, 0, 0),0 0 5px rgb(0, 0, 0), 0 5px 0 rgb(0, 0, 0) ;
+            margin-top: 1px;
+            letter-spacing: 1px;
+            font-family: 'Times New Roman';
+        }
+        .accordions {
+width: 80%;
+margin: 100px auto;
+}
+
+
+
+.accordion-item {
+background-color: #00ffff;
+margin-bottom: 20px;
+border: 1px solid #100e34;
+border-radius: 5px;
+color: #000000;
+}
+
+.accordion-item .accordion-title {
+cursor: pointer;
+padding: 20px;
+transition: transform 0.4s ease-in-out;
+}
+
+
+
+.accordion-item .accordion-title h3 {
+font-weight: 700;
+margin: 0;
+font-size: 18px;
+display: flex;
+justify-content: space-between;
+font-weight: bold;
+}
+
+
+
+.accordion-item .accordion-title i.fa-chevron-down.chevron-top {
+transform: rotate(-180deg);
+color: #fa5019;
+}
+
+.accordion-item .accordion-content {
+display: none;
+line-height: 1.7;
+padding: 20px;
+background-color: #ffffff;
+border-radius: 0 0 5px 5px;
+color: #100e34;
+}
+
+
+
+.accordion-item .accordion-content p {
+margin: 0;
+font-family: "Nunito Sans", sans-serif;
+font-size: 16px;
+}
+
+.details p {
+font-family: "Nunito Sans", sans-serif;
+font-size: 16px;
+line-height: 1.5em;
+}
+
+.details ul li {
+font-family: "Nunito Sans", sans-serif;
+font-size: 16px;
+line-height: 1.7em;
+}
+
+    </style>
+</head>
+<body class="backgroundcolor">
+    <p class="title">FAQ's</p>
+   
+        <p style="font-weight:500 ;font-family: 'Georgia';text-align: center;">Hola! <br> Here you can find 
+        frequenty asked questions.</p>
+    
+    <div class="accordions">
+        <div class="accordion-item">
+          <div class="accordion-title" data-tab="item1">
+            <h3>Why FutureRDP? <i class="fa fa-chevron-down"></i></h3>
+          </div>
+          <div class="accordion-content" id="item1">
+            <p>
+              FutureRDP provides cheap and affordable Linux and Windows VPS servers and
+              storage solution since 2008 for more than 11 years in multiple locations such as
+              the United States, UK, France, Germany, Netherlands, and Canada. We have a range
+              of different solutions for different purposes such as SSD VPS and Storage
+              servers. All servers are equipped with RAID10 only SSD drives and FREE DDoS
+              Protection!
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-title" data-tab="item2">
+            <h3>what is ip address? <i class="fa fa-chevron-down"></i></h3>
+          </div>
+          <div class="accordion-content" id="item2">
+            <p>
+                The Internet Protocol Address (or IP Address) is a unique address that computing devices such as personal computers, tablets,
+                 and smartphones use to identify themselves and communicate with other devices in the IP network. Any device connected to the IP network 
+                 must have a unique IP address within the network. An IP address is analogous to a street address or telephone number in that it is used
+                  to uniquely identify an entity.
+
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-title" data-tab="item3">
+            <h3>What is Mobile Privacy? <i class="fa fa-chevron-down"></i></h3>
+          </div>
+          <div class="accordion-content" id="item3">
+            <p>
+                Mobile privacy is a term used to refer to the privacy rights of users of mobile devices (such as smartphones, tablets and smart watches) that are different from and typically additional to the the rights of users of internet based services in general. Mobile services are typically offered through mobile apps.
+
+                Aside from mobile apps many organizations offer a mobile-specific version of their website, which should comply with all to the obligations related to the collection, use, and sharing of information that apply to websites.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-title" data-tab="item4">
+            <h3>how much user information did google sold every year? <i class="fa fa-chevron-down"></i></h3>
+          </div>
+          <div class="accordion-content" id="item4">
+            <p>
+                In 2019, Google agreed to pay $170 million to settle claims by the FTC and New York Attorney General that YouTube illegally collected personal information from children without their parents permission etc.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".accordion-title").click(function (e) {
+        var accordionitem = $(this).attr("data-tab");
+        $("#" + accordionitem)
+          .slideToggle()
+          .parent()
+          .siblings()
+          .find(".accordion-content")
+          .slideUp();
+  
+       
+        $("#" + accordionitem)
+          .parent()
+          .siblings()
+          .find(".accordion-title")
+          .removeClass("active-title");
+  
+        $("i.fa-chevron-down", this).toggleClass("chevron-top");
+        $("#" + accordionitem)
+          .parent()
+          .siblings()
+          .find(".accordion-title i.fa-chevron-down")
+          .removeClass("chevron-top");
+      });
+    });
+  
+    </script>
+</body>
+</html>
